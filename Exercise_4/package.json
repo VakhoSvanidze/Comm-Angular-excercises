@@ -1,0 +1,15 @@
+{
+  "name": "exercise_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "tsc && node ."
+  },
+  "devDependencies": {
+    "typescript": "^3.5.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
