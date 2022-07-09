@@ -1,0 +1,60 @@
+<button
+  class="button_1"
+  mat-button
+  color="primary"
+  (click)="toggleCustomers()"
+>
+  Load Customers
+</button>
+<br />
+
+<mat-form-field *ngIf="isVisible" class="example-full-width" appearance="fill">
+  <mat-label>Search for Customer</mat-label>
+  <input
+    matInput
+    placeholder="Search for a customer"
+    [(ngModel)]="searchField"
+  />
+</mat-form-field>
+
+<div *ngIf="isVisible">
+  <h1>Customers</h1>
+
+  <mat-grid-list
+    cols="4"
+    rowHeight="10:1"
+    *ngFor="
+      let customer of customerList
+        | searchCustomer: searchField
+        | deleteCustomer: indexToRemove;
+      let i = index
+    "
+  >
+    <mat-grid-tile> {{ i + 1 }}: {{ customer.firstName }} </mat-grid-tile>
+    <mat-grid-tile>
+      {{ customer.lastName }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      {{ customer.age }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-icon 
+        class="remove-icon"
+        aria-hidden="false" aria-label="remove circle"
+        (click)="giveIndex(i)"
+      >
+        remove_circle
+      </mat-icon>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <button
+  class="button_1"
+  mat-button
+  color="primary"
+  (click)="addCustomer()"
+>
+  Add Customers
+</button>
+<br />
+</div>

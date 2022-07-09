@@ -1,0 +1,36 @@
+mat-grid-tile {
+  border: 1px solid black;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+mat-form-field {
+  margin-top: 2rem;
+  width: 30%;
+  margin-left: 35%;
+}
+
+.remove-icon {
+  color: var(--color-first);
+}
+
+.button_1 {
+  width: 180px;
+  margin-left: 40%;
+  margin-top: 2rem;
+  background-color: #df6667;
+  background-image: linear-gradient(
+    45deg,
+    #e6726e 0%,
+    #e6726e 50%,
+    #facfa7 90%
+  );
+  text-transform: uppercase;
+  border-radius: 30px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+
+  &:hover {
+    background-position: 0 0;
+  }
+}
