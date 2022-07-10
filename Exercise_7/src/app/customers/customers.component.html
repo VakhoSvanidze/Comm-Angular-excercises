@@ -22,7 +22,7 @@
 
   <mat-grid-list
     cols="4"
-    rowHeight="10:1"
+    rowHeight="7:1"
     *ngFor="
       let customer of customerList
         | searchCustomer: searchField
@@ -38,13 +38,14 @@
       {{ customer.age }}
     </mat-grid-tile>
     <mat-grid-tile>
-      <mat-icon 
+      <button
+        mat-fab 
         class="remove-icon"
-        aria-hidden="false" aria-label="remove circle"
+        aria-label="Example icon button with a delete icon"
         (click)="giveIndex(i)"
       >
-        remove_circle
-      </mat-icon>
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-grid-tile>
   </mat-grid-list>
 
