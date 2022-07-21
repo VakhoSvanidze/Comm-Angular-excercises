@@ -1,0 +1,27 @@
+<div *ngIf="customerService.isVisible">
+  <h2>Deleted Customers</h2>
+  <mat-grid-list
+    cols="4"
+    rowHeight="6:1"
+    *ngFor="let customer of customerService.deletedCustomerList; let i = index"
+  >
+    <mat-grid-tile> {{ i + 1 }}: {{ customer.firstName }} </mat-grid-tile>
+    <mat-grid-tile>
+      {{ customer.lastName }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      {{ customer.age }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="Example icon button with a home icon"
+        (click)="restoreCustomer(i)"
+      >
+        <mat-icon>autorenew</mat-icon>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <h2>App Version: {{ random }}</h2>
+</div>
