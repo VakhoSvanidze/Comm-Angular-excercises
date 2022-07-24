@@ -1,0 +1,23 @@
+<div class="removed-container" *ngIf="customerService.isVisible">
+  <h2>Deleted Customers</h2>
+  <div
+    *ngFor="let customer of customerService.deletedCustomerList; let i = index"
+  >
+    <div class="individual-list">
+      <div class="list-text">
+        <p>{{ i + 1 }}: {{ customer.firstName }}</p>
+      </div>
+      <div class="list-text">
+        <p>{{ customer.lastName }}</p>
+      </div>
+      <div class="list-text">
+        <p>{{ customer.birthday | date: "shortDate" }}</p>
+      </div>
+      <div>
+        <button class="restore-button" (click)="restoreCustomer(i)">
+          Restore User
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

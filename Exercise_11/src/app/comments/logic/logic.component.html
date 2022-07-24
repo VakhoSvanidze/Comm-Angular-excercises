@@ -1,0 +1,7 @@
+<button mat-button color="primary" (click)="getComments()">get Comments</button>
+
+<app-comments-display
+  [comments$]="comments$"
+  (emitDeleteEvent)="deleteItem($event)"
+></app-comments-display>
+

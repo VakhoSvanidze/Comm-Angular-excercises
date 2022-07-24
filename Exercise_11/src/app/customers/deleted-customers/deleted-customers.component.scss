@@ -1,0 +1,41 @@
+h2 {
+  margin-left: 40%;
+  color: #0a3a21;
+}
+
+.removed-container {
+  position: absolute;
+  top: 41vh;
+  left: 50vw;
+  width: 50%;
+}
+
+.individual-list {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid gray;
+  height: 58px;
+  padding-bottom: -10px;
+  margin: 0px;
+}
+
+.list-text {
+  width: 25%;
+  margin-top: 40px;
+}
+
+.restore-button {
+  width: 80%;
+  margin-top: 25px;
+  color: white;
+  font-weight: bold;
+  background-color: #0a3a21;
+  background-image: linear-gradient(
+    45deg,
+    #0a3a21 0%,
+    #0f9751 50%,
+    #1196be 90%
+  );
+  border: none;
+  border-radius: 10px;
+}
